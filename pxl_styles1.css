@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+
+/* Body Styles - Format background, Flex */
+body {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: rgb(20, 35, 65);
+}
+
+
+/* Body Header Styles */
+body > header {
+	width: 100%;
+}
+
+body > header > a > img {
+	display: block;
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+/* Horizontal Navigation Styles  - Format lists, Use pseudo classes/elements */
+
+body > header > nav.horizontal li {
+	width: 20%;
+}
+nav.horizontal li {
+	background-color: rgb(0, 20, 45);
+	display: block;
+	line-height: 3em;
+	float: left;
+}
+nav.horizontal a {
+	color: white;
+	display: block;
+	text-align: center;
+}
+
+nav > ul > li > a:hover, nav > ul > li > a:active {
+	background-color: rgba(255,255,255,70%);
+	font-weight: bold;
+	color: rgb(0,25,50);
+	font-size: 18px;
+}
+
+/* Both Sections  - Format text */
+section > h1 {
+	font-size: 26pt;
+	color: rgb(0, 20, 45);
+	clear: left;
+}
+
+section > h2 {
+	clear: left;
+}
+
+section > img {
+	clear: left;
+}
+
+
+
+/* News Section */
+
+section#news {
+	padding: 1.5em;
+	background-color: rgba(255,255,255,70%);
+}
+
+
+section#news > img {
+	width: 35%;
+	float: left;
+	margin: 0em 1em 1em 0em;
+	background-color: rgba(255,255,255,70%);
+}
+
+/* Catalog Section - Grids*/
+
+section#sale {
+	padding: 1.5em;
+	background-color: rgba(255,255,255,70%);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.5fr 2fr 2fr;
+}
+
+
+
+p.price {
+	font-size: 36px;
+	font-weight: bold;
+	color: rgb(0,25,50);
+}
+p.price2 {
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(0,25,50);
+}
+section#sale > article > img {
+	width: 35%;
+	float: left;
+	margin: 0em 1em 0.5em 0em;
+	background-color: rgba(255,255,255,70%);
+}
+
+/* Footer Styles */
+
+footer {
+	display: block;
+	width: 100%;
+	clear: left;
+	background-color: rgb(0, 20, 45);
+	text-align: center;
+	color: white;
+}
+
+
+/*	================================
+	Phone Styles, @media, Responsive Design
+	================================
+*/
+
+@media only screen and (max-width: 768px) {
+	body > header > a > img {
+	width: 220px;
+	}
+	section {
+		  width: 100%;
+		  margin: 0;
+	}
+	h1 {
+	font-size: 28pt;
+	}
+	h2 {
+	font-size: 18pt;
+	}
+	section#sale {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.5fr 2fr 2fr;
+}
+	section#sale > h1 {
+	grid-column: span 2;
+	}
+	section#sale > article {
+		grid-column: span 2;
+		font-size: 24px;
+	}
+	p {
+	font-size: 14pt;	
+	}
+	footer {
+	position: fixed;
+	bottom: 0px;
+	}
+	
+}
+/*	=================================
+	Desktop Styles: 769px and greater
+	=================================
+	
+*/
+
+@media only screen and (min-width: 769px) {
+	body > header > a > img {
+	width: 320px;
+	}
+	section {
+		  width: 90%;
+		  margin: auto;
+	}
+	h1 {
+	font-size: 24pt;
+	}
+	h2 {
+	font-size: 16pt;
+	}
+	h2 {
+	margin: 1em 0em 0em 0em;
+	font-size: 16pt;
+	}
+
+	section#sale {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.5fr 2fr 2fr;
+}
+	section#sale > h1 {
+	grid-column: span 2;
+	}
+	section#sale > article#console {
+		grid-column: span 2;
+		font-size: 24px;
+	}
+}
+/*	=================================
+	Desktop Styles: 1025px and greater
+	=================================
+	
+*/
+
+@media only screen and (min-width: 1025px) {
+	section#news {
+		  width: 25%;
+		  margin: 2em auto 2em auto;
+	}
+	/* Overflowing*/
+	section#sale {
+		display: grid;
+		width: 65%;
+		margin: 2em auto 2em 2em;
+		height: 768px;
+		overflow: scroll;
+	}
+	h1 {
+	font-size: 26pt;
+	}
+	h2 {
+	margin: 0em 0em 0em 0em;
+	font-size: 14pt;
+	}
+	
+}
